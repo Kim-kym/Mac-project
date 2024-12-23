@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70em;
+    height: 45em;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+.check-btn {
+    background: gray;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+.check-btn .btn-yes {
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+}
+
+.check-btn .btn-no {
+    display: inline-block;
+    background: rgb(221, 162, 162);
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+}
+
+.slide {
+    text-align: center;
+}
+
