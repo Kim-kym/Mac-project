@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70em;
+    /* height: 80%; */
+    position: relative;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.check-btn {
+    background: gray;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+.check-btn .btn-yes {
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+}
+
+.check-btn .btn-no {
+    display: inline-block;
+    background: rgb(221, 162, 162);
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+}
+
+.slide {
+    text-align: center;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content img {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .modal-content div {
+    flex-grow: 1;
+  }
+  
+  .set-menu-content {
+    display: flex; /* 세트 메뉴 이미지와 텍스트를 가로로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    gap: 20px; /* 이미지와 텍스트 간격 */
+    margin-bottom: 20px;
+  }
+  
+  .set-menu-content img {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .set-menu-content div {
+    flex-grow: 1;
+  }
+  
+  .set-menu-content p {
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,7 @@
+button {
+    font-weight: 500;
+}
+
+button:hover {
+    font-weight: 1000;  
+}

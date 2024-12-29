@@ -1,0 +1,248 @@
+ h1 {
+    display: flex; /*컨테이너 활성화*/
+    align-items: center; /*세로축 중앙 정렬*/
+    color: rgba(233, 250, 1, 0.955);
+    background: radial-gradient(circle, blue, aqua, skyblue, white);
+    font-size: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+div {
+    /* margin-top: 20px; */
+    justify-content: center;
+    /* background-color: blanchedalmond; */
+    /* position: relative; */
+}
+
+.back {
+  background-image: url('/image/side/배경사진.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px); /* 흐림 효과 적용 */
+  z-index: -1; /* 콘텐츠보다 뒤에 위치하도록 설정 */
+  opacity: 0.5; /* 배경 흐림 효과 투명도 */
+}
+main {
+  margin: auto;
+  width: 70%;
+  /* background-color: rgb(186, 237, 254); */
+}
+
+main > div {
+  display: flex;
+  justify-content: center; 
+}
+
+button {
+    background-color: rgb(186, 237, 254);
+    margin-bottom: 0;
+    border: 0;
+    width: 100px;
+    height: 25px;
+  }
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4) {
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: rgba(93, 93, 254, 0.466); /* 마우스가 올라갔을 때 버튼 색 바뀜 */
+  transform: scale(1.05); /* 확대 */
+  font-size: 1em; /* 텍스트 크기 확대 */
+  color: yellow; /* 글자 색 변경 */
+}
+
+button:focus {
+  background-color: rgb(93, 93, 254); /* 버튼을 클릭했을 때 색 바뀜 */
+  transform: scale(1.05); /* 확대 */
+  font-size: 1em; /* 텍스트 크기 확대 */
+  color: yellow;
+  font-weight: bold;
+}
+
+/* .category {
+  background-color: #d32f2f;
+} */
+
+#menu {
+  /* background-color: #d32f2f; */
+  margin: 0;
+}
+
+
+.category ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 열 */
+  grid-auto-rows: auto; /* 행의 높이를 자동으로 설정 */
+  gap: 10px; /* 아이템 간 간격 */
+  max-height: calc(3 * 150px + 10px); /* 2줄 제한: 항목 높이 * 2줄 + 간격 */
+  overflow-y: auto; /* 2줄을 초과할 경우 스크롤 생성 */
+  
+  
+  min-width: 250px;
+  background-color: rgb(93, 93, 254); 
+  /* margin-top: 0; */
+}
+
+li{
+  box-sizing: border-box;       /* 테두리와 패딩 포함 크기 계산 */
+  padding: 5px;
+  text-align: center; /* 내용 중앙 정렬 */
+  /* flex: 1 1 calc(33.33% - 10px); 각 li의 크기: 3등분 */
+  /* background-color: rgba(127, 255, 212, 0.486); */
+  /* border: 1px solid #ccc; */
+  /* min-width: 70%; */
+}
+
+li:hover{
+  transform: scale(1.010); /* 확대 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+  font-size: 1em; /* 텍스트 크기 확대 */
+  font-weight: bold; /* 글씨 두껍게 */
+  background-color: lightgoldenrodyellow;
+}
+
+/* 장바구니 고정 */
+#cart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  max-height: 70vh; /* 장바구니의 최대 높이 설정 */
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤 가능하게 설정 */
+}
+
+/* 카테고리별 합산 금액 스타일 */
+#cart h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* 장바구니 항목들을 가로로 나열 */
+.cart-items {
+  display: flex;
+  flex-wrap: wrap; /* 항목들이 공간을 넘치면 아래로 내려가도록 설정 */
+  gap: 20px; /* 항목들 간의 간격 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin-top: 10px;
+}
+
+/* 장바구니 항목 스타일 */
+.cart-item {
+  display: flex;
+  flex-direction: row; /* 항목을 가로로 나열 */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* 전체 너비 */
+  max-width: 600px; /* 항목 너비 제한 */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.cart-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: translateY(100%); /* 기본 상태는 아래로 내려가 있음 */
+  overflow-y: auto;
+}
+
+
+.cart-container.open {
+  transform: translateY(0); /* 열리면 위로 올라옴 */
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+/* 수량 버튼 및 입력창 스타일 */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  background-color: #4CAF50;
+  width: 2em;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+  background-color: #45a049;
+}
+
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 합계 금액 오른쪽에 표시 */
+.item-total {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* 삭제 버튼 스타일 */
+.remove-btn {
+  width: 5em;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-btn:hover {
+  background-color: #e53935;
+}
+
+/* 총액 표시 */
+.total {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
